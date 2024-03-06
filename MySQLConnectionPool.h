@@ -34,6 +34,8 @@ private:
 	bool loadConfigFile();
 	//运行在独立的线程中，专门负责生产新连接
 	void produceConnectionTask();
+	//运行在独立的线程中，专门负责检查连接空闲时间
+	void scannerConnectionTask();
 
 	string m_IP;				//mysql IP地址
 	int m_port;					//mysql 端口号
