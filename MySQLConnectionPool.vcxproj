@@ -163,6 +163,9 @@
     <ClInclude Include="MySQLConnectionPool.h" />
     <ClInclude Include="Public.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="mysql.ini" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

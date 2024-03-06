@@ -28,7 +28,7 @@ bool Connection::update(const string &sql)
 	//insert\delete\update
 	if (mysql_query(m_conn, sql.c_str()))
 	{
-		LOG("更新失败:" + sql);
+		LOG("更新失败: \n" + sql + "\n" + mysql_error(m_conn));
 		return false;
 	}
 	return true;
@@ -39,7 +39,7 @@ MYSQL_RES* Connection::query(const string &sql)
 {
 	if (mysql_query(m_conn, sql.c_str()))
 	{
-		LOG("查询失败:" + sql);
+		LOG("查询失败: \n" + sql + +"\n" + mysql_error(m_conn));
 		return nullptr;
 	}
 	return mysql_use_result(m_conn);
